@@ -1,0 +1,96 @@
+{
+  "erin": {
+    "drivers": [
+      {
+        "name": "Verstappen",
+        "points": 454
+      },
+      {
+        "name": "Russell",
+        "points": 275
+      },
+      {
+        "name": "Sainz",
+        "points": 246
+      },
+      {
+        "name": "Norris",
+        "points": 122
+      },
+      {
+        "name": "Alonso",
+        "points": 81
+      },
+      {
+        "name": "Bottas",
+        "points": 49
+      },
+      {
+        "name": "Magnussen",
+        "points": 25
+      },
+      {
+        "name": "Gasly",
+        "points": 23
+      },
+      {
+        "name": "Zhou",
+        "points": 6
+      },
+      {
+        "name": "Albon",
+        "points": 4
+      }
+    ],
+    "total": 1285
+  },
+  "andrew": {
+    "drivers": [
+      {
+        "name": "Leclerc",
+        "points": 308
+      },
+      {
+        "name": "Perez",
+        "points": 305
+      },
+      {
+        "name": "Hamilton",
+        "points": 240
+      },
+      {
+        "name": "Ocon",
+        "points": 92
+      },
+      {
+        "name": "Ricciardo",
+        "points": 37
+      },
+      {
+        "name": "Vettel",
+        "points": 37
+      },
+      {
+        "name": "Stroll",
+        "points": 18
+      },
+      {
+        "name": "Schumacher",
+        "points": 12
+      },
+      {
+        "name": "Tsunoda",
+        "points": 12
+      },
+      {
+        "name": "Latifi",
+        "points": 2
+      },
+      {
+        "name": "Hulkenberg",
+        "points": 0
+      }
+    ],
+    "total": 1063
+  }
+}

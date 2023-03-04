@@ -7,7 +7,8 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "postinstall": "remix setup node"
+    "postinstall": "remix setup node",
+    "save-season": "ts-node ./scripts/save-season-data.ts"
   },
   "dependencies": {
     "@remix-run/react": "^1.3.3",
@@ -16,7 +17,8 @@
     "node-fetch": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "remix": "^1.3.3"
+    "remix": "^1.3.3",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.3.3",
