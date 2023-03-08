@@ -11,4 +11,5 @@ export interface TeamData {
 export interface LoaderResponse {
   erin: TeamData;
   andrew: TeamData;
+  season: string;
 }

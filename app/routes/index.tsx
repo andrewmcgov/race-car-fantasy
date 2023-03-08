@@ -25,7 +25,7 @@ export default function Index() {
         <Link to="/?season=2022">2022</Link>
         <Link to="/?season=2023">2023</Link>
       </nav>
-      <h2 className="season-header">Season: 2022</h2>
+      <h2 className="season-header">Season: {data.season}</h2>
       <main>
         <div className="contestant">
           <h2>Erin - {data.erin.total}</h2>
