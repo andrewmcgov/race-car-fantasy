@@ -46,6 +46,7 @@ export async function getSeason() {
   });
 
   return {
+    season: '2023',
     erin: {
       drivers: erinDriverData,
       total: erinDriverData.reduce((acc, current) => {
