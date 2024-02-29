@@ -1,0 +1,97 @@
+{
+  "erin": {
+    "drivers": [
+      {
+        "name": "Perez",
+        "points": 285
+      },
+      {
+        "name": "Alonso",
+        "points": 206
+      },
+      {
+        "name": "Leclerc",
+        "points": 206
+      },
+      {
+        "name": "Norris",
+        "points": 205
+      },
+      {
+        "name": "Russell",
+        "points": 175
+      },
+      {
+        "name": "Albon",
+        "points": 27
+      },
+      {
+        "name": "Tsunoda",
+        "points": 17
+      },
+      {
+        "name": "Hulkenberg",
+        "points": 9
+      },
+      {
+        "name": "Zhou",
+        "points": 6
+      },
+      {
+        "name": "Magnussen",
+        "points": 3
+      }
+    ],
+    "total": 1139
+  },
+  "andrew": {
+    "drivers": [
+      {
+        "name": "Verstappen",
+        "points": 575
+      },
+      {
+        "name": "Hamilton",
+        "points": 234
+      },
+      {
+        "name": "Sainz",
+        "points": 200
+      },
+      {
+        "name": "Piastri",
+        "points": 97
+      },
+      {
+        "name": "Stroll",
+        "points": 74
+      },
+      {
+        "name": "Gasly",
+        "points": 62
+      },
+      {
+        "name": "Ocon",
+        "points": 58
+      },
+      {
+        "name": "Bottas",
+        "points": 10
+      },
+      {
+        "name": "Ricciardo",
+        "points": 6
+      },
+      {
+        "name": "Sargeant",
+        "points": 1
+      },
+      {
+        "name": "De Vries",
+        "points": 0
+      }
+    ],
+    "total": 1317
+  },
+  "season": "2023"
+}

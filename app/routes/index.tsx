@@ -2,7 +2,7 @@ import {LoaderFunction, useLoaderData} from 'remix';
 import {Link} from 'remix';
 import {defaultSeason} from '~/data';
 import {LoaderResponse} from '~/types';
-import {getSeason, get2022Data} from '~/utilities/season.server';
+import {getSeason, get2022Data, get2023Data} from '~/utilities/season.server';
 
 export const loader: LoaderFunction = async ({request}) => {
   const url = new URL(request.url);
@@ -10,6 +10,8 @@ export const loader: LoaderFunction = async ({request}) => {
 
   if (season === '2022') {
     return get2022Data();
+  } else if (season === '2023') {
+    return get2023Data();
   }
 
   return await getSeason();
@@ -24,6 +26,7 @@ export default function Index() {
       <nav>
         <Link to="/?season=2022">2022</Link>
         <Link to="/?season=2023">2023</Link>
+        <Link to="/?season=2024">2024</Link>
       </nav>
       <h2 className="season-header">Season: {data.season}</h2>
       <main>

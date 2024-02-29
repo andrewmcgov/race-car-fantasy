@@ -49,6 +49,32 @@ export const drivers2023 = {
     'Bottas',
     'Stroll',
     'De Vries',
-    'Sargent',
+    'Sargeant',
+    'Ricciardo',
+  ],
+};
+
+export const drivers2024 = {
+  erinDrivers: [
+    'Perez',
+    'Russell',
+    'Sainz',
+    'Alonso',
+    'Stroll',
+    'Ocon',
+    'Ricciardo',
+    'Zhou',
+    'Magnussen',
+  ],
+  andrewDrivers: [
+    'Leclerc',
+    'Hamilton',
+    'Norris',
+    'Piastri',
+    'Tsunoda',
+    'Gasly',
+    'Bottas',
+    'Hulkenberg',
+    'Albon',
   ],
 };

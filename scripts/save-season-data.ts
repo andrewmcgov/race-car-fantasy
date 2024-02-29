@@ -1,16 +1,16 @@
 import cheerio from 'cheerio';
 import fs from 'fs';
-import {DriverData, LoaderResponse} from '~/types';
-import {drivers2022} from '../app/data/drivers';
+import {DriverData} from '~/types';
+import {drivers2023} from '../app/data/drivers';
 
-const {erinDrivers, andrewDrivers} = drivers2022;
+const {erinDrivers, andrewDrivers} = drivers2023;
 
-// run this script from the project root with `nnpm run save-season-data`
+// run this script from the project root with `npm run save-season`
 // update values to pull data from the correct season
 // only need to run once per season once the season is over
 (async function () {
   const res = await fetch(
-    'https://www.formula1.com/en/results.html/2022/drivers.html'
+    'https://www.formula1.com/en/results.html/2023/drivers.html'
   );
 
   const html = await res.text();
@@ -54,5 +54,5 @@ const {erinDrivers, andrewDrivers} = drivers2022;
 
   const dataAsString = JSON.stringify(data, null, 2);
 
-  fs.writeFileSync('./app/data/2022.json', dataAsString);
+  fs.writeFileSync('./app/data/2023.json', dataAsString);
 })();

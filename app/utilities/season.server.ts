@@ -1,15 +1,19 @@
 import cheerio from 'cheerio';
-import {drivers2023} from '~/data/drivers';
+import {drivers2024} from '~/data/drivers';
 import {DriverData, LoaderResponse} from '~/types';
-const {erinDrivers, andrewDrivers} = drivers2023;
+const {erinDrivers, andrewDrivers} = drivers2024;
 
 export function get2022Data() {
   return require('~/data/2022.json') as LoaderResponse;
 }
 
+export function get2023Data() {
+  return require('~/data/2023.json') as LoaderResponse;
+}
+
 export async function getSeason() {
   const res = await fetch(
-    'https://www.formula1.com/en/results.html/2023/drivers.html'
+    'https://www.formula1.com/en/results.html/2024/drivers.html'
   );
 
   const html = await res.text();
@@ -46,7 +50,7 @@ export async function getSeason() {
   });
 
   return {
-    season: '2023',
+    season: '2024',
     erin: {
       drivers: erinDriverData,
       total: erinDriverData.reduce((acc, current) => {
