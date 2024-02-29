@@ -72,6 +72,7 @@ h1 {
 h2 {
   font-style: italic;
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 500px) {
