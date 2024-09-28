@@ -56,6 +56,7 @@ export const drivers2023 = {
 
 export const drivers2024 = {
   erinDrivers: [
+    'Verstappen',
     'Perez',
     'Russell',
     'Sainz',
@@ -65,6 +66,8 @@ export const drivers2024 = {
     'Ricciardo',
     'Zhou',
     'Magnussen',
+    'Bearman',
+    'Lawson',
   ],
   andrewDrivers: [
     'Leclerc',
@@ -76,5 +79,7 @@ export const drivers2024 = {
     'Bottas',
     'Hulkenberg',
     'Albon',
+    'Sargeant',
+    'Colapinto',
   ],
 };

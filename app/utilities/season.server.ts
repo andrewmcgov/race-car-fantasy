@@ -18,7 +18,7 @@ export async function getSeason() {
 
   const html = await res.text();
   const $ = cheerio.load(html);
-  const driverRows = $('.resultsarchive-table tr');
+  const driverRows = $('.f1-table tr');
 
   const erinDriverData: DriverData[] = [];
   const andrewDriverData: DriverData[] = [];
@@ -33,18 +33,27 @@ export async function getSeason() {
   }
 
   driverRows.map((_, node) => {
-    const name = $(node).find('.hide-for-mobile').text();
-    const points = $(node).find('td.dark.bold').text();
+    const name = $(node).find('a[href*="drivers"]').first().text();
+    const points = $(node).find('p').last().text();
 
     if (isNaN(Number(points))) {
       return;
     }
 
-    const driver = {name, points: Number(points)};
+    const erinMatch = erinDrivers.find((driver) => name.includes(driver));
+    const andrewMatch = andrewDrivers.find((driver) => name.includes(driver));
+    const match = erinMatch || andrewMatch;
 
-    if (erinDrivers.includes(name)) {
+    if (!match) {
+      console.log('No match found for:', name, points);
+      return;
+    }
+
+    const driver = {name: match, points: Number(points)};
+
+    if (erinMatch) {
       erinDriverData.push(driver);
-    } else if (andrewDrivers.includes(driver.name)) {
+    } else if (andrewMatch) {
       andrewDriverData.push(driver);
     }
   });
