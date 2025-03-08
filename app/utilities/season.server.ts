@@ -1,6 +1,6 @@
 import cheerio from 'cheerio';
-import {drivers2024} from '~/data/drivers';
-import {DriverData, LoaderResponse} from '~/types';
+import {drivers2024} from '../data/drivers';
+import {DriverData, LoaderResponse} from '../types';
 const {erinDrivers, andrewDrivers} = drivers2024;
 
 export function get2022Data() {
@@ -9,6 +9,10 @@ export function get2022Data() {
 
 export function get2023Data() {
   return require('~/data/2023.json') as LoaderResponse;
+}
+
+export function get2024Data() {
+  return require('~/data/2024.json') as LoaderResponse;
 }
 
 export async function getSeason() {
