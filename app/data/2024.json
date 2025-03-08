@@ -1,0 +1,105 @@
+{
+  "season": "2024",
+  "erin": {
+    "drivers": [
+      {
+        "name": "Verstappen",
+        "points": 437
+      },
+      {
+        "name": "Sainz",
+        "points": 290
+      },
+      {
+        "name": "Russell",
+        "points": 245
+      },
+      {
+        "name": "Perez",
+        "points": 152
+      },
+      {
+        "name": "Alonso",
+        "points": 70
+      },
+      {
+        "name": "Stroll",
+        "points": 24
+      },
+      {
+        "name": "Ocon",
+        "points": 23
+      },
+      {
+        "name": "Magnussen",
+        "points": 16
+      },
+      {
+        "name": "Ricciardo",
+        "points": 12
+      },
+      {
+        "name": "Bearman",
+        "points": 7
+      },
+      {
+        "name": "Zhou",
+        "points": 4
+      },
+      {
+        "name": "Lawson",
+        "points": 4
+      }
+    ],
+    "total": 1284
+  },
+  "andrew": {
+    "drivers": [
+      {
+        "name": "Norris",
+        "points": 374
+      },
+      {
+        "name": "Leclerc",
+        "points": 356
+      },
+      {
+        "name": "Piastri",
+        "points": 292
+      },
+      {
+        "name": "Hamilton",
+        "points": 223
+      },
+      {
+        "name": "Gasly",
+        "points": 42
+      },
+      {
+        "name": "Hulkenberg",
+        "points": 41
+      },
+      {
+        "name": "Tsunoda",
+        "points": 30
+      },
+      {
+        "name": "Albon",
+        "points": 12
+      },
+      {
+        "name": "Colapinto",
+        "points": 5
+      },
+      {
+        "name": "Bottas",
+        "points": 0
+      },
+      {
+        "name": "Sargeant",
+        "points": 0
+      }
+    ],
+    "total": 1375
+  }
+}
