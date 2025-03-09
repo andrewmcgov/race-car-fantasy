@@ -1,35 +1,35 @@
 {
-  "name": "remix-template-vercel-ts",
+  "name": "Fantasy race cars",
   "private": true,
-  "description": "",
-  "license": "",
-  "sideEffects": false,
+  "type": "module",
   "scripts": {
-    "build": "remix build",
-    "dev": "remix dev",
-    "postinstall": "remix setup node",
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "start": "react-router-serve ./build/server/index.js",
+    "typecheck": "react-router typegen && tsc",
     "save-season": "ts-node ./scripts/save-season-data.ts"
   },
   "dependencies": {
-    "@remix-run/react": "^1.19.2",
-    "@remix-run/vercel": "^1.19.2",
+    "@react-router/node": "^7.1.5",
+    "isbot": "^5.1.17",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.5",
     "cheerio": "^1.0.0-rc.10",
     "node-fetch": "^3.2.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "remix": "^1.19.2",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.19.2",
-    "@remix-run/eslint-config": "^1.19.2",
-    "@remix-run/serve": "^1.19.2",
-    "@types/react": "^17.0.24",
-    "@types/react-dom": "^17.0.9",
-    "eslint": "^8.11.0",
-    "typescript": "^4.5.5"
-  },
-  "engines": {
-    "node": ">=14"
+    "@react-router/dev": "^7.1.5",
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "@vercel/node": "^5.1.2",
+    "@vercel/react-router": "^1.0.2",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vite-tsconfig-paths": "^5.1.4"
   }
 }

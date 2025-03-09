@@ -1,18 +1,21 @@
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import {drivers2024} from '../data/drivers';
-import {DriverData, LoaderResponse} from '../types';
+import type {DriverData, LoaderResponse} from '../types';
+import data2022 from '~/data/2022.json';
+import data2023 from '~/data/2023.json';
+import data2024 from '~/data/2024.json';
 const {erinDrivers, andrewDrivers} = drivers2024;
 
 export function get2022Data() {
-  return require('~/data/2022.json') as LoaderResponse;
+  return data2022 as LoaderResponse;
 }
 
 export function get2023Data() {
-  return require('~/data/2023.json') as LoaderResponse;
+  return data2023 as LoaderResponse;
 }
 
 export function get2024Data() {
-  return require('~/data/2024.json') as LoaderResponse;
+  return data2024 as LoaderResponse;
 }
 
 export async function getSeason() {

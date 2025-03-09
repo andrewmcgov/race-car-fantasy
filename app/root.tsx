@@ -1,29 +1,22 @@
 import {
+  isRouteErrorResponse,
+  Link,
   Links,
-  LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from 'remix';
-import type {MetaFunction} from 'remix';
+} from 'react-router';
 
-import styles from '~/styles/global.css';
+import type {Route} from './+types/root';
+import './app.css';
 
-export const meta: MetaFunction = () => ({
-  charset: 'utf-8',
-  title: 'Fantasy Race Cars',
-  viewport: 'width=device-width,initial-scale=1',
-});
-
-export function links() {
-  return [{rel: 'stylesheet', href: styles}];
-}
-
-export default function App() {
+export function Layout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en">
       <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
         <link
@@ -46,11 +39,54 @@ export default function App() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </head>
       <body>
-        <Outlet />
+        {children}
         <ScrollRestoration />
         <Scripts />
-        <LiveReload />
       </body>
     </html>
+  );
+}
+
+export default function App() {
+  return <Outlet />;
+}
+
+export function ErrorBoundary({error}: Route.ErrorBoundaryProps) {
+  let message = 'Oops!';
+  let details = 'An unexpected error occurred.';
+  let stack: string | undefined;
+
+  if (isRouteErrorResponse(error)) {
+    message = error.status === 404 ? '404' : 'Error';
+    details =
+      error.status === 404
+        ? 'The requested page could not be found.'
+        : error.statusText || details;
+  } else if (import.meta.env.DEV && error && error instanceof Error) {
+    details = error.message;
+    stack = error.stack;
+  }
+
+  return (
+    <>
+      <h1>{message}</h1>
+      <nav>
+        <Link to="/?season=2022">2022</Link>
+        <Link to="/?season=2023">2023</Link>
+        <Link to="/?season=2024">2024</Link>
+      </nav>
+      <main className="error">
+        <div>
+          <p>{details}</p>
+        </div>
+        <div>
+          {stack && (
+            <pre>
+              <code>{stack}</code>
+            </pre>
+          )}
+        </div>
+      </main>
+    </>
   );
 }
