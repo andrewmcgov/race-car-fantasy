@@ -107,6 +107,12 @@ main {
   padding: 0rem 1rem;
 }
 
+main.error {
+  flex-direction: column;
+  max-width: 1000px;
+  overflow: scroll;
+}
+
 .contestant {
   width: 100%;
 }

@@ -1,15 +1,22 @@
-import {LoaderFunction, useLoaderData} from 'remix';
-import {Link} from 'remix';
-import {defaultSeason} from '~/data';
-import {LoaderResponse} from '~/types';
+import type {Route} from './+types/home';
 import {
   getSeason,
   get2022Data,
   get2023Data,
   get2024Data,
 } from '~/utilities/season.server';
+import {defaultSeason} from '../data';
+import {useLoaderData, Link} from 'react-router';
+import type {LoaderResponse} from '~/types';
 
-export const loader: LoaderFunction = async ({request}) => {
+export function meta({}: Route.MetaArgs) {
+  return [
+    {title: 'Fantasy race cars'},
+    {name: 'description', content: 'Just for fun.'},
+  ];
+}
+
+export async function loader({request}: Route.LoaderArgs) {
   const url = new URL(request.url);
   const season = url.searchParams.get('season') || defaultSeason;
 
@@ -22,9 +29,9 @@ export const loader: LoaderFunction = async ({request}) => {
   }
 
   return await getSeason();
-};
+}
 
-export default function Index() {
+export default function Home() {
   const data = useLoaderData<LoaderResponse>();
 
   return (
