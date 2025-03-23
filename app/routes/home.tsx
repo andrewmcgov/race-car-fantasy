@@ -41,6 +41,7 @@ export default function Home() {
         <Link to="/?season=2022">2022</Link>
         <Link to="/?season=2023">2023</Link>
         <Link to="/?season=2024">2024</Link>
+        <Link to="/?season=2025">2025</Link>
       </nav>
       <h2 className="season-header">Season: {data.season}</h2>
       <main>

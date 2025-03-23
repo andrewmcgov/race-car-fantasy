@@ -83,3 +83,30 @@ export const drivers2024 = {
     'Colapinto',
   ],
 };
+
+export const drivers2025 = {
+  erinDrivers: [
+    'Norris',
+    'Verstappen',
+    'Antonelli',
+    'Hamilton',
+    'Sainz',
+    'Albon',
+    'Doohan',
+    'Hulkenberg',
+    'Ocon',
+    'Stroll',
+  ],
+  andrewDrivers: [
+    'Piastri',
+    'Russell',
+    'Leclerc',
+    'Lawson',
+    'Gasly',
+    'Tsunoda',
+    'Hadjar',
+    'Bearman',
+    'Alonso',
+    'Bortoleto',
+  ],
+};
