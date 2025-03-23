@@ -1,1 +1,1 @@
-export const defaultSeason = '2024';
+export const defaultSeason = '2025';
